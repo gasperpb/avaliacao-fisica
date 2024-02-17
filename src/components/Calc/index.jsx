@@ -35,22 +35,27 @@ function Calc() {
   };
 
   return (
-    <>
-      <h1>Calc</h1>
-      <input className='bg-red-400' type="number" placeholder="Idade" onChange={e => setIdade(e.target.value)} />
-      <input type="number" placeholder="Peso" onChange={e => setPeso(e.target.value)} />
-      <input type="number" placeholder="Altura" onChange={e => setAltura(e.target.value)} />
-      <select onChange={e => setAtividade(e.target.value)}>
-        <option value={1.2}>Sedentário</option>
-        <option value={1.375}>Levemente ativo</option>
-        <option value={1.55}>Moderadamente Ativo</option>
-        <option value={1.725}>Muito Ativo</option>
-        <option value={1.9}>Super Ativo</option>
-      </select>
-      <input type="number" placeholder="Dobra Abdomen" onChange={e => setDobras({ ...dobras, abdomen: e.target.value })} />
-      <input type="number" placeholder="Dobra Coxa" onChange={e => setDobras({ ...dobras, coxa: e.target.value })} />
-      <input type="number" placeholder="Dobra Peito" onChange={e => setDobras({ ...dobras, peito: e.target.value })} />
-      <button onClick={calcular}>Calcular</button>
+    <div class="mx-auto max-w-2xl text-center py-24 space-y-2 " >
+
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">Calculadora de porcentagem de gordura corporal</h1>
+
+
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2  ">
+        <input class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="number" placeholder="Idade" onChange={e => setIdade(e.target.value)} />
+        <input class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="number" placeholder="Peso" onChange={e => setPeso(e.target.value)} />
+        <input class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="number" placeholder="Altura" onChange={e => setAltura(e.target.value)} />
+        <select onChange={e => setAtividade(e.target.value)}>
+          <option value={1.2}>Sedentário</option>
+          <option value={1.375}>Levemente ativo</option>
+          <option value={1.55}>Moderadamente Ativo</option>
+          <option value={1.725}>Muito Ativo</option>
+          <option value={1.9}>Super Ativo</option>
+        </select>
+        <input class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="number" placeholder="Dobra Abdomen" onChange={e => setDobras({ ...dobras, abdomen: e.target.value })} />
+        <input class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="number" placeholder="Dobra Coxa" onChange={e => setDobras({ ...dobras, coxa: e.target.value })} />
+        <input class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="number" placeholder="Dobra Peito" onChange={e => setDobras({ ...dobras, peito: e.target.value })} />
+      </div>
+      <button class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" onClick={calcular}>Calcular</button>
       <p className='text-red-500'>Porcentagem de Gordura Corporal: {resultado}</p>
       <p>Calorias Diárias: {calorias}</p>
       <p>Massa Gorda: {massaGorda}</p>
@@ -59,7 +64,7 @@ function Calc() {
       {/* <Chart massaGorda={massaGorda} massaMagra={massaMagra} pesoOsseo={pesoOsseo} /> */}
 
 
-    </>
+    </div>
 
   );
 }
